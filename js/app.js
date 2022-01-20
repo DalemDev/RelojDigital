@@ -1,22 +1,12 @@
-let validar = 'fondo0'
-document.body.classList.toggle('fondo0')
+var index = 0
+var listaImg = ['../img/fondo0.jpg','../img/fondo1.jpg','../img/fondo2.jpg']
+
 function efectoImagen(){
-    if(validar === 'fondo0'){
-        document.body.classList.toggle('fondo1')
-        document.body.classList.remove('fondo0')
-        document.body.classList.remove('fondo2')
-        validar = 'fondo1'
-    }else if(validar === 'fondo1'){
-        document.body.classList.toggle('fondo2')
-        document.body.classList.remove('fondo0')
-        document.body.classList.remove('fondo1')
-        validar = 'fondo2'
-    }else if(validar === 'fondo2'){
-        document.body.classList.toggle('fondo0')
-        document.body.classList.remove('fondo1')
-        document.body.classList.remove('fondo2')
-        validar = 'fondo0'
-    }
+   document.body.style.backgroundImage = `url('${listaImg[index]}')`
+   index++
+   if(index === 2){
+       index = 0
+   }
 }
 
 const mostrarReloj = () => {
@@ -53,8 +43,6 @@ const mostrarReloj = () => {
     let mes = meses[fecha.getMonth()];
     let fechaTexto = `${diaSemana}, ${dia}, ${mes}`;
     document.getElementById('fecha').innerHTML = fechaTexto;
-
-    //toggle funciona como un interruptor si esta aplicado lo quita y si no esta aplicado lo aplica
     document.getElementById('contenedor').classList.toggle('animar');
 }   
 
@@ -65,5 +53,5 @@ const formatoHora = (hora) => {
     return hora;
 }
 
-setInterval(mostrarReloj, 1000);
-setInterval(efectoImagen, 5000);
+setInterval(mostrarReloj, 1000)
+setInterval(efectoImagen, 5000)

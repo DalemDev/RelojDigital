@@ -4,19 +4,13 @@ body,html{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url('../img/fondo0.jpg'); */
+    /* background-image: url('../img/fondo2.jpg'); */
     background-size: cover;
     background-position: center;
     transition: all 1s ease-in-out;
 }
-.fondo0{
-    background-image: url('../img/fondo0.jpg');
-}
-.fondo1{
-    background-image: url('../img/fondo1.jpg');
-}
-.fondo2{
-    background-image: url('../img/fondo2.jpg');
+.quitar{
+    background-image: none;
 }
 #reloj{
     font-family: sans-serif;
