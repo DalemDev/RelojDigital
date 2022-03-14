@@ -1,5 +1,5 @@
 var index = 0
-var listaImg = ['../img/fondo0.jpg','../img/fondo1.jpg','../img/fondo2.jpg']
+var listaImg = ['img/fondo0.jpg','img/fondo1.jpg','img/fondo2.jpg']
 
 function efectoImagen(){
    document.body.style.backgroundImage = `url('${listaImg[index]}')`
